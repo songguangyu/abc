@@ -21,6 +21,14 @@ class Index extends Abc.C {
 			'sure': true
 		});
 	}
+
+	uploader() {
+		var file = this.file();
+		console.log(file);
+		this.success({
+			'file': file
+		});
+	}
 }
 
 module.exports = Index;

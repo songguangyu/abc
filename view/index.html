@@ -2,28 +2,47 @@
 <html>
 <head>
 	<title></title>
+    <style type="text/css">
+        #uploader{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="/static/webuploader.css">
 </head>
 <body>
 <div>
-    
-    dasdasdasdas
+    <div id="uploader">上传</div>
 </div>
 </body>
 <script src="/static/jquery-1.12.1.js"></script>
+<script src="/static/webuploader.js"></script>
 <script type="text/javascript">
-	$.ajax({
-     	type: 'POST',
-     	url: "./index/abc",
-    	data: {
-    		need : 'sgy',
-    		kiss : 'yjr'
-    	},
-    	dataType:'json',
-    	success: function() {
-    		alert(2);
-    	}
-    });
+    var uploader = WebUploader.create({
 
+        // swf文件路径
+        swf:'/static/Uploader.swf',
+        
+        auto: true,
+
+        // 文件接收服务端。
+        server: '/index/uploader',
+
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#uploader',
+
+        // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+        resize: false
+    });
+    // $.ajax({
+    //     type: "POST",
+    //     url: "/index/abc" ,
+    //     data: {aaa:111,bbb:222} ,
+    //     success: function(res) {
+    //         console.log(res);
+    //     }
+    // });
 
 </script>
 </html>
