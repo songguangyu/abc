@@ -24,7 +24,6 @@ class Index extends Abc.C {
 
 	uploader() {
 		var file = this.file();
-		console.log(file);
 		this.success({
 			'file': file
 		});
