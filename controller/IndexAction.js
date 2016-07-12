@@ -1,7 +1,6 @@
 'use strict';
-var Abc = require('../lib/core/abc.js');
 
-class Index extends Abc.C {
+class Index extends Abc.Base {
 	constructor(context) { //构造函数
 		super(context);
 		this.context = context;
