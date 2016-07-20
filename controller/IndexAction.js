@@ -7,6 +7,8 @@ class Index extends Abc.Base {
     }
 
 	index() {
+		var cookie = this.cookie("sgy","111111");
+		//console.log(cookie);
 		this.display();
 	}
 
