@@ -1,6 +1,6 @@
 'use strict';
 
-class Index extends Abc.Base {
+class Index extends Abc.controller{
 	constructor(context) { //构造函数
 		super(context);
 		this.context = context;
@@ -8,7 +8,7 @@ class Index extends Abc.Base {
 
 	index() {
 		var cookie = this.cookie("sgy","111111");
-		//console.log(cookie);
+		this.assign({aaa:"我爱你"});
 		this.display();
 	}
 
