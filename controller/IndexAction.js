@@ -1,4 +1,5 @@
 'use strict';
+var co =require('co');
 
 class Index extends Abc.controller{
 	constructor(context) { //构造函数
@@ -6,10 +7,17 @@ class Index extends Abc.controller{
 		this.context = context;
     }
 
-	index() {
+	*index() {
 		var cookie = this.cookie("sgy","111111");
 		this.assign({aaa:"我爱你"});
+		let data  = yield this.model('select * from class');
 		this.display();
+	}
+
+	timeout() {
+		setTimeout(()=>{
+			 this.display();
+		},1000)
 	}
 
 	admin() {

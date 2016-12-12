@@ -16,13 +16,17 @@
     }
   ],
   "dependencies": {
+    "bluebird": "^3.4.1",
     "colors": "^1.1.2",
     "ejs": "^2.3.4",
     "formidable": "^1.0.17",
     "koa": "^1.2.0",
-    "lodash": "^4.13.1"
+    "lodash": "^4.13.1",
+    "mysql": "^2.11.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mime": "^1.3.4"
+  },
   "keywords": [
     "abc",
     "class"

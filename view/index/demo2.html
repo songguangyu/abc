@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+circle,
+path {
+  cursor: pointer;
+}
+
+circle {
+  fill: none;
+  pointer-events: all;
+}
+
+</style>
+<body>
+<script src="/static/d3/d33.js"></script>
+<script>
+var theData = [1,2,3]  //一个数组
+
+var p = d3.select("body").selectAll("p")
+    .data(theData)
+    .enter()
+    .append("p")
+    .text("hello");
+</script>
