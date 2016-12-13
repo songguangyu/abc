@@ -7,10 +7,10 @@ class Index extends Abc.controller{
 		this.context = context;
     }
 
-	*index() {
+	async index() {
 		var cookie = this.cookie("sgy","111111");
 		this.assign({aaa:"我爱你"});
-		let data  = yield this.model('select * from class');
+		let data  = await this.model('select * from class');
 		this.display();
 	}
 
